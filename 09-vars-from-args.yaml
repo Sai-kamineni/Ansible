@@ -1,5 +1,5 @@
 - name: variables from args
-  host: web
+  hosts: web
   tasks: 
   - name: Print the info
     ansible.buitling.debug:
