@@ -3,7 +3,7 @@
   vars_promt:
   - name: COUSRE
     prompt: Please enter the cousre name
-  -name: TRAINER
+  - name: TRAINER
     prompt: Please enter the trainer name
   tasks:
   - name: Print the inforamtion
