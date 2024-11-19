@@ -5,6 +5,6 @@
     DURATION: "120 HRS"
     TRAINER: "SIVA"
   tasks:
-  - name: print the info
+  - name: print the information
     ansible.builtin.debug:
-    msg: "Hi imam learning {{COURSE}}, duration is {{DURATION}}, Trainer is {{TRAINER}}"  
+      msg: "Hi imam learning {{COURSE}}, duration is {{DURATION}}, Trainer is {{TRAINER}}"  
