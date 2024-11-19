@@ -13,3 +13,6 @@
   - name: Task-02
     ansible.builtin.debug:
       msg: "This is from Play-02"
+
+
+#Usually for every playbook we run one play
