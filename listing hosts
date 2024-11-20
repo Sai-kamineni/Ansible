@@ -1,0 +1,4 @@
+ansible -i inventory.ini ungrouped --list-hosts
+ansible -i inventory.ini web 
+ansible -i inventory.ini backend
+ansible -i inventory.ini ungrouped 
