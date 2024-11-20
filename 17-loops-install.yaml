@@ -10,4 +10,4 @@
     - mysql
     - nginx
     - postfix
-    - http
+    - httpd
