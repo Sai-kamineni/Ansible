@@ -14,3 +14,39 @@
   - name: create user
     ansible.builtin.command: useradd expense
     when: USER.rc != 0     #return code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# [ ec2-user@ip-172-31-40-128 ~/Ansible ]$ ansible-playbook -i inventory.ini 13.conditions-userCreation.yaml
+
+# PLAY [create user] ***************************************************************************************************************************
+
+# TASK [Gathering Facts] ***********************************************************************************************************************
+# ok: [172.31.32.206]
+
+# TASK [check user exists or not] **************************************************************************************************************
+# fatal: [172.31.32.206]: FAILED! => {"changed": true, "cmd": ["id", "expense"], "delta": "0:00:00.010495", "end": "2024-11-20 05:19:05.933612", "msg": "non-zero return code", "rc": 1, "start": "2024-11-20 05:19:05.923117", "stderr": "id: ‘expense’: no such user", "stderr_lines": ["id: ‘expense’: no such user"], "stdout": "", "stdout_lines": []}
+# ...ignoring
+
+# TASK [Print the user info] *******************************************************************************************************************
+# ok: [172.31.32.206] => {
+#     "msg": "user info: {'changed': True, 'stdout': '', 'stderr': 'id: ‘expense’: no such user', 'rc': 1, 'cmd': ['id', 'expense'], 'start': '2024-11-20 05:19:05.923117', 'end': '2024-11-20 05:19:05.933612', 'delta': '0:00:00.010495', 'failed': True, 'msg': 'non-zero return code', 'stdout_lines': [], 'stderr_lines': ['id: ‘expense’: no such user']}"
+# }
+
+# TASK [create user] ***************************************************************************************************************************
+# changed: [172.31.32.206]
+
+# PLAY RECAP ***********************************************************************************************************************************
+# 172.31.32.206              : ok=4    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=1
+
