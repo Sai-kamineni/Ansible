@@ -11,14 +11,14 @@
     - Terraform
     - K8
     live: true #boolean
-    tools:
-      ci: jenkins
+    tools:   #map/dictinary
+      ci: jenkins   #string
       cm: ansible
       cloud: aws
       aws:
       - IAM
       - S3
-    tasks:
-    - name: Print the information
-      ansible.builtin.debug:
-        msg: "Hi, course is {{ course }}, with duration: {{ duration }},  topics are: {{ topics }}, and live: {{ live }}, tools are: {{ tools }}"
+  tasks:
+  - name: Print the information
+    ansible.builtin.debug:
+      msg: "Hi, course is {{ course }}, with duration: {{ duration }},  topics are: {{ topics }}, and live: {{ live }}, tools are: {{ tools }}"
