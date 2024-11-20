@@ -5,14 +5,42 @@
   - name: my_number
     prompt: Please enter a number
     private: false #not confidential
-  
+  # vars:
+  #   my_number: 139 # number
   tasks:
   - name: Print this if less than 10
     ansible.builtin.debug:
       msg: "Given number {{ my_number }} is less than 10"
     when: my_number | int < 10 # conditional expression
 
-  - name: Print this if less than 10
+  - name: Print this if greater than 10
     ansible.builtin.debug:
       msg: "Given number {{ my_number }} is greater than 10"
     when: my_number | int > 10  
+
+
+
+
+
+
+
+
+
+# [ ec2-user@ip-172-31-40-128 ~/Ansible ]$ ansible-playbook -i inventory.ini 12-conditions.yaml
+# Please enter a number: 5
+
+# PLAY [Check number is less than 10 or not] ***************************************************************************************************
+
+# TASK [Gathering Facts] ***********************************************************************************************************************
+# ok: [localhost]
+
+# TASK [Print this if less than 10] ************************************************************************************************************
+# ok: [localhost] => {
+#     "msg": "Given number 5 is less than 10"
+# }
+
+# TASK [Print this if less than 10] ************************************************************************************************************
+# skipping: [localhost]
+
+# PLAY RECAP ***********************************************************************************************************************************
+# localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
