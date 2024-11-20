@@ -22,3 +22,21 @@
   - name: Print the information
     ansible.builtin.debug:
       msg: "Hi, course is {{ course }}, with duration: {{ duration }},  topics are: {{ topics }}, and live: {{ live }}, tools are: {{ tools }}"
+
+
+
+
+# [ ec2-user@ip-172-31-40-128 ~/Ansible ]$ ansible-playbook -i inventory.ini 11-datatypes.yaml
+
+# PLAY [Devops course info] ********************************************************************************************************************
+
+# TASK [Gathering Facts] ***********************************************************************************************************************
+# ok: [localhost]
+
+# TASK [Print the information] *****************************************************************************************************************
+# ok: [localhost] => {
+#     "msg": "Hi, course is Devops with AWS, with duration: 120,  topics are: ['Linux', 'Ansible', 'shell', 'Terraform', 'K8'], and live: True, tools are: {'ci': 'jenkins', 'cm': 'ansible', 'cloud': 'aws', 'aws': ['IAM', 'S3']}"
+# }
+
+# PLAY RECAP ***********************************************************************************************************************************
+# localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
