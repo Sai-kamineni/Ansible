@@ -8,7 +8,7 @@
     ignore_erros: True  #Error handling
   
   - name: Print the user info
-    ansible.buitltin.debug:
+    ansible.builtin.debug:
       msg: "user info: {{ USER }}"
   
   - name: create user
