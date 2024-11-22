@@ -58,3 +58,7 @@
       overwrite: true
     loop: "{{ ec2_instances.results }}"
     when: item.item == "frontend" #when keyword should not have {{}}
+
+
+
+#Create IAM user with CLI access and generate access key and secret key , use these to "aws configure"
