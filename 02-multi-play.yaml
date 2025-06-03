@@ -3,7 +3,7 @@
   hosts: web
   tasks:
   - name: Task-01
-    ansible.builtin.debug:
+    ansible.builtin.debug:                #if we dont give msg then default "Hello world" will print
       msg: "This is from Play-01"
 
 #Play-01
