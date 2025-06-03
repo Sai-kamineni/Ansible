@@ -11,7 +11,7 @@
 
 
 - name: vars to print
-  hosts: webs
+  hosts: web
   become: yes
   vars:
     COURSE: "Devops"
