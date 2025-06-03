@@ -12,6 +12,7 @@
 
 - name: vars to print
   hosts: webs
+  become: yes
   vars:
     COURSE: "Devops"
     DURATION: "120hrs"
