@@ -22,10 +22,14 @@
   hosts: web
   become: yes
   tasks:
-   - name: check user exists or not
-     ansible.builtin.command: id expense
-     register: USER  #here USER is a variable that gets output from above command
-     ignore_errors: True  #Error handling
+  - name: check user exists or not
+    ansible.builtin.command: id expense
+    register: USER
+    ignore_errors: True
+  
+  - name: Print the USER info
+    ansible.builtin.debug:
+      msg: "user info: {{USER}}
 
 
 
