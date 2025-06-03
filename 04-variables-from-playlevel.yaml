@@ -10,3 +10,13 @@
 #       msg: "Hi imam learning {{COURSE}}, duration is {{DURATION}}, Trainer is {{TRAINER}}"  
 
 
+- name: vars to print
+  hosts: webs
+  vars:
+    COURSE: "Devops"
+    DURATION: "120hrs"
+    TRAINER: "Sai"
+  tasks:
+  - name: print the information
+    ansible.builtin.debug:
+      msg: "Hi iam learing {{COURSE}}, duration IS {{DURATION}},Trainer is {{TRAINER}} 
