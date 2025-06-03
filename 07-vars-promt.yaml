@@ -1,13 +1,25 @@
-- name: variables from promt
+# - name: variables from promt
+#   hosts: web
+#   vars_prompt:
+#   - name: COURSE
+#     prompt: Please enter the course name
+#     private: false #not confidentaial
+#   - name: TRAINER
+#     prompt: Please enter the trainer name
+#     private: false #not confidentaial
+#   tasks:
+#   - name: Print the inforamtion
+#     ansible.builtin.debug:
+#       msg: "Hi, I am learning {{COURSE}}, Trainer: {{TRAINER}}"
+
+- name: Vars from prompt
   hosts: web
-  vars_prompt:
+  vars_promt:
   - name: COURSE
-    prompt: Please enter the course name
-    private: false #not confidentaial
-  - name: TRAINER
-    prompt: Please enter the trainer name
-    private: false #not confidentaial
+    promt: Enter the course name
+  - name: Learner
+    prompt: enter the course name
   tasks:
-  - name: Print the inforamtion
+  - name: print the inforamtion
     ansible.builtin.debug:
-      msg: "Hi, I am learning {{COURSE}}, Trainer: {{TRAINER}}"
+      msg: "Hi , im learning {{COURSE}}, Learner {{Learner}}"
