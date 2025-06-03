@@ -14,9 +14,9 @@
 
 - name: Vars from prompt
   hosts: web
-  vars_promt:
+  vars_prompt:
   - name: COURSE
-    promt: Enter the course name
+    prompt: Enter the course name
   - name: Learner
     prompt: enter the course name
   tasks:
