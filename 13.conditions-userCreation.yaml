@@ -29,7 +29,7 @@
   
   - name: Print the USER info
     ansible.builtin.debug:
-      msg: "user info: {{USER}}
+      msg: "user info: {{USER}}"
 
 
 
