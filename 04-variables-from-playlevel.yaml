@@ -1,23 +1,10 @@
-# - name: variables to print
-#   hosts: web
-#   vars:
-#     COURSE: "Devops with AWS"
-#     DURATION: "120 HRS"
-#     TRAINER: "SIVA"
-#   tasks:
-#   - name: print the information
-#     ansible.builtin.debug:
-#       msg: "Hi imam learning {{COURSE}}, duration is {{DURATION}}, Trainer is {{TRAINER}}"  
-
-
-- name: vars to print
+- name: variables to print
   hosts: web
-  become: yes
   vars:
-    COURSE: "Devops"
-    DURATION: "120hrs"
-    TRAINER: "Sai"
+    COURSE: "Devops with AWS"
+    DURATION: "120 HRS"
+    TRAINER: "SIVA"
   tasks:
   - name: print the information
     ansible.builtin.debug:
-      msg: "Hi iam learing {{COURSE}}, duration IS {{DURATION}},Trainer is {{TRAINER}}" 
+      msg: "Hi imam learning {{COURSE}}, duration is {{DURATION}}, Trainer is {{TRAINER}}"  
