@@ -17,8 +17,10 @@
   vars_prompt:
   - name: COURSE
     prompt: Enter the course name
+    private: false
   - name: Learner
-    prompt: enter the course name
+    prompt: enter the learner name
+    private: false
   tasks:
   - name: print the inforamtion
     ansible.builtin.debug:
